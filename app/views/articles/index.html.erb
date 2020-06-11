@@ -1,10 +1,9 @@
-<div id="page-content">
-  <h1 class="text-center mt-4">Listing all articles</h1>
+<h1 class="text-center mt-4">Listing all articles</h1>
 
-  <div class="container">
+<div class="container">
   <% @articles.each do |article| %>
     <div class="row">
-      <div class="col-lg mt-4">  
+      <div class="col-lg mt-2 mb-2">  
         <div class="card text-center shadow">
           <div class="card-header font-italic">
             by Author Name
@@ -24,5 +23,4 @@
       </div>
     </div>
   <% end %>
-  </div>
 </div>
