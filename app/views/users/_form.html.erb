@@ -16,7 +16,7 @@
           <%= f.password_field :password, class: "form-control", placeholder: "Choose a password" %>
         </div>  
         <div class="form-group">
-          <%= f.submit "Sign up", class: "btn btn-outline-primary btn-lg" %>
+          <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-outline-primary btn-lg") %>
         </div>
       <% end %>
       <%= link_to '[ Cancel and return to articles listing ]', articles_path %> 
