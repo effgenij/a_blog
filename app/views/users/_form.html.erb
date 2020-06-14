@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col-lg">
+    <%= render 'shared/errors', obj: @user %>
+    <div class="card text-center p-3 mb-3 shadow">
+      <%= form_with(model: @user, local: true) do |f| %>
+        <div class="form-group">
+          <%= f.label :username, class: "col-form-label" %>
+          <%= f.text_field :username, class: "form-control", placeholder: "Enter a username"  %>
+        </div>
+        <div class="form-group"> 
+          <%= f.label :email, class: "col-form-label" %>
+          <%= f.email_field :email, class: "form-control", placeholder: "Enter your email address" %>
+        </div>  
+        <div class="form-group"> 
+          <%= f.label :password, class: "col-form-label" %>
+          <%= f.password_field :password, class: "form-control", placeholder: "Choose a password" %>
+        </div>  
+        <div class="form-group">
+          <%= f.submit class: "btn btn-outline-primary btn-lg" %>
+        </div>
+      <% end %>
+      <%= link_to '[ Cancel and return to articles listing ]', articles_path %> 
+    </div>
+  </div>
+</div>
+

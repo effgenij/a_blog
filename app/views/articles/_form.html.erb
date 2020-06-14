@@ -1,6 +1,6 @@
 <div class="container">
   <div class="col-lg">
-    <%= render 'shared/errors' %>
+    <%= render 'shared/errors', obj: @article %>
     <div class="card text-center p-3 mb-3 shadow">
       <%= form_with(model: @article, local: true) do |f| %>
         <div class="form-group">
