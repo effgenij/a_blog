@@ -10,7 +10,7 @@
           </div>
           <div class="card-body">
             <h5 class="card-title">
-              <%= link_to gravatar_for(user, size: 150, class: "rounded shadow mx-auto d-block"), user %>
+              <%= link_to gravatar_for(user, size: 150), user %>
             </h5>
             <p class="card-text"><%= pluralize(user.articles.count, "article") %></p>
             <%= link_to 'View profile', user, class: "btn btn-outline-success" %>
