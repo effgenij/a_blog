@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include Pagy::Frontend
 
   def gravatar_for(user, options = { size: 80, class: "rounded shadow mx-auto d-block" })
     email_address = user.email.downcase

@@ -7,4 +7,14 @@
 </div>
 
 <h3 class="text-center mt-4 mb-4">Articles</h3>
+
+<div class="d-flex justify-content-center mt-2">
+  <%== pagy_bootstrap_nav(@pagy) %>
+</div>
+
 <%= render 'articles/article' %>
+
+<div class="d-flex justify-content-center mt-2">
+  <%== pagy_bootstrap_nav(@pagy) %>
+</div>
+
