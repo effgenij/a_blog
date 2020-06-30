@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update]
+  before_action :require_user, except: %i[show index]
+  before_action :require_same_user, only: %i[edit update]
+
   def show
     @pagy, @articles = pagy(@user.articles, items: 5)
   end
@@ -43,5 +46,12 @@ class UsersController < ApplicationController
   end
   def user_params
     params.require(:user).permit(:username, :email, :password)
+  end
+
+  def require_same_user
+    if current_user != @user
+      flash[:alert] = "You can only edit or delete your own profile"
+      redirect_to @user
+    end
   end
 end
