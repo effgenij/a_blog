@@ -18,7 +18,6 @@ class UsersController < ApplicationController
   def edit
   end
 
-
   def update
     if @user.update(user_params)
       flash[:notice] = "Your account information was successfully updated"
@@ -51,6 +50,7 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
+
   def user_params
     params.require(:user).permit(:username, :email, :password)
   end
