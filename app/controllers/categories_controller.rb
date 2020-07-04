@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
   end
 
   def index
-
+    @pagy, @categories = pagy(Category.all, items: 5)
   end
 
   def show
