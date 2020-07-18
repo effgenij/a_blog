@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-
+  before_action :set_category, only: %i[show edit update]
   before_action :require_admin, except: %i[index show]
 
   def new
@@ -21,11 +21,26 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
     @pagy, @articles = pagy(@category.articles, items: 5)
   end
 
+  def edit
+  end
+
+  def update
+    if @category.update(category_params)
+      flash[:notice] = "Category name updated successfully"
+      redirect_to @category
+    else
+      render 'edit'
+    end
+  end
+
   private
+
+  def set_category
+    @category = Category.find(params[:id])
+  end
 
   def category_params
     params.require(:category).permit(:name)
