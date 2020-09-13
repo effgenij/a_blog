@@ -1,0 +1,2 @@
+CREATE USER a_blog;
+ALTER USER a_blog WITH SUPERUSER;
