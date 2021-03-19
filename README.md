@@ -1,24 +1,21 @@
-# README
+# Простой блог - A_blog
+Приложение для написания статей и заметок.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Версия руби и рельс
+Приложение написано на `rails 6.0.3.2`, `ruby 2.7.1 `.
 
-Things you may want to cover:
+### Демо версия
+Демо версия доступна по адресу
+* [my-a-blog.herokuapp.com](https://my-a-blog.herokuapp.com//)
 
-* Ruby version
+### Установка и запуск
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Клонировать репозиторий
+``` git clone git@github.com:effgenij/a_blog.git```
+2. ИСпользовать ваши данные в 
+``` config/database.yml```
+```.env```
+3. Использовать Bundle
+```bundle install```
+4. Создать БД
+```rails db:setup```
